@@ -15,6 +15,7 @@ int main() {
     {
         f = 15;
     }
+    f=2;
     printf("Result: %d", c);
     char buffer[1024];
     int n;
