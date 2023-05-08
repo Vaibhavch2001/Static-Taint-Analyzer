@@ -49,7 +49,6 @@ class TaintAnalyzer(c_ast.NodeVisitor):
     #Overrinding visit_If Function which sets taint to left hand value of all assignment statements inside the if, else
     # block if the condition in the if contains a tainted variable
     def visit_If(self,node):
-        print(node.show)
         if self.trav(node.cond):
             for statement in node.iftrue.block_items + node.iffalse.block_items:
                 if type(statement) is c_ast.Assignment:
